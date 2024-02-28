@@ -2,6 +2,7 @@
     margin: 0 auto 10px auto;
     display: flex;
     width: 500px;
+    /* border: black solid 1px; */
 }
 
 input{
@@ -17,11 +18,21 @@ input:focus{
     outline: none;
 }
 
+input[type=radio]{
+    min-width: 0;
+    margin-right: 10px;
+}
+
 .field-name{
     display: flex;
     min-width: 90px;
     align-items:center;
     height: 40px;
+    /* border: black solid 1px; */
+}
+
+.full-size-input{
+    width: 100%;
 }
 
 h1 {
