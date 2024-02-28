@@ -1,5 +1,5 @@
 .field{
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
     display: flex;
     width: 500px;
 }
@@ -18,7 +18,10 @@ input:focus{
 }
 
 .field-name{
+    display: flex;
     min-width: 90px;
+    align-items:center;
+    height: 40px;
 }
 
 h1 {

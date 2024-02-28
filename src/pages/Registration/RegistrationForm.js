@@ -1,6 +1,7 @@
 import {FullNameInput} from "../../components/RegistrationForm/FullNameInput"
 import { EmailInput } from "../../components/RegistrationForm/EmailInput"
 import "../../styles/RegistrationFormStyles.css"
+import { BirthdayDateInput } from "../../components/RegistrationForm/BirthdayDateInput"
 
 export function RegistrationForm()
 {
@@ -11,8 +12,7 @@ export function RegistrationForm()
           <h1>Registration</h1>
           <FullNameInput/>
           <EmailInput/>
-          <EmailInput/>
-
+          <BirthdayDateInput/>
           <button>Registrate</button>
         </div>
       </form>
