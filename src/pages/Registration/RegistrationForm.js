@@ -1,8 +1,10 @@
 import {FullNameInput} from "../../components/RegistrationForm/FullNameInput"
 import { EmailInput } from "../../components/RegistrationForm/EmailInput"
-import "../../styles/RegistrationFormStyles.css"
 import { BirthdayDateInput } from "../../components/RegistrationForm/BirthdayDateInput"
 import { ChooseGender } from "../../components/RegistrationForm/ChooseGender"
+import { PasspordsInput } from "../../components/RegistrationForm/PasswordsInput"
+import "../../styles/RegistrationFormStyles.css"
+import { RegisterButton } from "../../components/RegistrationForm/RegisterButton"
 
 export function RegistrationForm()
 {
@@ -15,7 +17,8 @@ export function RegistrationForm()
           <EmailInput/>
           <BirthdayDateInput/>
           <ChooseGender/>
-          <button>Registrate</button>
+          <PasspordsInput/>
+          <RegisterButton/>
         </div>
       </form>
     </div>
