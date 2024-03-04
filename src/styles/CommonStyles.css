@@ -8,8 +8,9 @@
 input{
     height: 30px;
     min-width: 100px;
-    background: #f1f1f1;
+    background: #dbdbdb;
     margin: 5px 20px 0 20px;
+    border-radius: 10px;
     border: none;
 }
 

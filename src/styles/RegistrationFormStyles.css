@@ -17,7 +17,8 @@
     margin: 5% auto 15% auto; /* 5% сверху, 15% снизу и по центру */
     border: 1px solid #888;
     width: 550px; /* Может быть больше или меньше, в зависимости от размера экрана */
-}
+    border-radius: 5%;
+  }
 
 .container{
   width: 100%; /* Полная ширина */
@@ -32,4 +33,9 @@
   background-color: #2268fd;
   border: none;
   text-align: center;
+  border-radius: 10px;
+}
+
+.registration-btn:hover{
+  background-color: #1e51be;
 }

@@ -1,7 +1,7 @@
 export function RegisterButton(){
     return(
         <div>
-            <button type="button" className="registration-btn">Register</button>
+            <button type="submit" className="registration-btn" autofocus>Register</button>
         </div>
     )
 }

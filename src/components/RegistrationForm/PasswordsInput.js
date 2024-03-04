@@ -1,6 +1,6 @@
 import { CommonInput } from "./CommonInput";
 
-export function PasspordsInput(){
+export function PasswordsInput(){
     return(
         <>
             <CommonInput label={'Password'}/>
