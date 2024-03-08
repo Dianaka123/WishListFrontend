@@ -8,13 +8,11 @@ export function FullNameInput()
     const data = useContext(RegistrationContext);
 
     function handelFirstName(name){
-        console.log(data)
         data['firstName'] = name;
     }
 
     function handelSecondName(name){
-        console.log(data)
-        data['secondName'] = name;
+        data['lastName'] = name;
     }
 
     return(

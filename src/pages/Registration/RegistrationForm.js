@@ -13,7 +13,7 @@ export function RegistrationForm()
 {
   const initData = {
     firstName: "",
-    secondName: "",
+    lastName: "",
     birthDate: "",
     email: "",
     gender: "",

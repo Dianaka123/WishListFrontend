@@ -6,12 +6,12 @@ export function PasswordsInput(){
     const data = useContext(RegistrationContext);
     
     function setPassword(e){
-        data["password"] = e.value;
+        data["password"] = e.target.value;
     }
     
     return(
         <>
-            <CommonInput label={'Password'} onChange={setPassword}/>
+            <CommonInput label={'Password'} handleChange={setPassword}/>
             <CommonInput label={'Confirm Password'}/>
         </>
     )

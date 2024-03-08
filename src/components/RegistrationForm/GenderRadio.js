@@ -5,7 +5,7 @@ export function GenderRadio({id, gender}){
     const data = useContext(RegistrationContext);
 
     function setGender(e){
-        data["gender"] = e.value;
+        data["gender"] = id;
     }
 
     return(
