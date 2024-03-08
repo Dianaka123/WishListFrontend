@@ -1,7 +1,7 @@
 import "../../styles/CommonStyles.css";
 import { useContext } from 'react';
 import { NameInput } from "./NameInput";
-import { RegistrationContext, RegistrationDispatchContext } from "../../contexts/RegistrationContext";
+import { RegistrationContext } from "../../contexts/RegistrationContext";
 
 export function FullNameInput()
 {
@@ -14,7 +14,6 @@ export function FullNameInput()
 
     function handelSecondName(name){
         console.log(data)
-
         data['secondName'] = name;
     }
 
