@@ -5,26 +5,21 @@ import { ChooseGender } from "../../components/RegistrationForm/ChooseGender"
 import { PasswordsInput } from "../../components/RegistrationForm/PasswordsInput"
 import "../../styles/RegistrationFormStyles.css"
 import { RegisterButton } from "../../components/RegistrationForm/RegisterButton"
-import { useReducer } from "react"
-import { RegistrationContext, RegistrationDispatchContext } from "../../contexts/RegistrationContext"
-import registerReducer from "../../reducers/registerReducer"
+import { RegistrationContext, RegistrationData } from "../../contexts/RegistrationContext"
 
 export function RegistrationForm()
 {
-  const initData = {
+  let data: RegistrationData = {
+    email: "",
     firstName: "",
     lastName: "",
     birthDate: "",
-    email: "",
     gender: "",
-    password: ""
-  }
-
-  const [data, dispatch] = useReducer(registerReducer, initData);
+    password: "",
+  };
 
   return(
     <RegistrationContext.Provider value={data}>
-      <RegistrationDispatchContext.Provider value={dispatch}>
         <div className="modal">
           <form className="modal-content">
             <div className="container">
@@ -38,7 +33,6 @@ export function RegistrationForm()
             </div>
           </form>
         </div>
-      </RegistrationDispatchContext.Provider>
     </RegistrationContext.Provider>
   )
 }

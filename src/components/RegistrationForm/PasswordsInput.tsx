@@ -6,7 +6,7 @@ export function PasswordsInput(){
     const data = useContext(RegistrationContext);
     
     function setPassword(e){
-        data["password"] = e.target.value;
+        data.password = e.target.value;
     }
     
     return(

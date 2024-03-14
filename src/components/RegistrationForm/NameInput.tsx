@@ -1,18 +1,18 @@
 import { useState } from "react";
 import "../../styles/InputStyles.css";
 import "../../styles/TextStyles.css";
+import { RegistrationField, Validator } from "./Validator";
 
 export function NameInput({labelText, handelName}){
 
     const [isValid, setIsValid] = useState(true);
 
-    const regex = /^[a-zA-Z ]{2,30}$/;
     var inputStyle = isValid ? "input" : "input input-error";
 
     function validateName(name){
-        let isNameValid = regex.test(name);
+        const error = Validator.VerifyField(RegistrationField.Name, name, "name");
 
-        setIsValid(isNameValid);
+        setIsValid(error == "");
     }
 
     return(

@@ -6,13 +6,13 @@ import { RegistrationContext } from "../../contexts/RegistrationContext";
 export function FullNameInput()
 {
     const data = useContext(RegistrationContext);
-
+    
     function handelFirstName(name){
-        data['firstName'] = name;
+        data.firstName = name;
     }
 
     function handelSecondName(name){
-        data['lastName'] = name;
+        data.lastName = name;
     }
 
     return(
