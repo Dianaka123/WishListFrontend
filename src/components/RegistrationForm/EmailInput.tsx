@@ -2,7 +2,7 @@ import {CommonInput} from "./CommonInput"
 import "../../styles/CommonStyles.css";
 import { useContext, useState } from "react";
 import { RegistrationContext } from "../../contexts/RegistrationContext";
-import { RegistrationField, Validator } from "./Validator";
+import { RegistrationField, RegistrationValidator } from "../../utils/RegistrationValidator";
 
 export function EmailInput(){
     const [isValid, setIsValid] = useState(true);
@@ -16,7 +16,7 @@ export function EmailInput(){
     }
 
     function validateEmail(email: string){
-        const error = Validator.VerifyField(RegistrationField.Email, email, "email");
+        const error = RegistrationValidator.VerifyField(RegistrationField.Email, email, "email");
         setIsValid(error == "");
     }
 

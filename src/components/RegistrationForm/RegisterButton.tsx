@@ -1,6 +1,6 @@
 import { useContext, useState } from "react"
 import { RegistrationContext } from "../../contexts/RegistrationContext";
-import { Validator } from "./Validator";
+import { RegistrationValidator } from "../../utils/RegistrationValidator";
 
 export function RegisterButton(){
 
@@ -11,7 +11,7 @@ export function RegisterButton(){
 
     function handelClick(e){
         e.preventDefault();
-        const errors= Validator.VerifyData(data);
+        const errors= RegistrationValidator.VerifyData(data);
         if(errors?.length == 0){
             RegisterClick();
         }

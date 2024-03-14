@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../../styles/InputStyles.css";
 import "../../styles/TextStyles.css";
-import { RegistrationField, Validator } from "./Validator";
+import { RegistrationField, RegistrationValidator } from "../../utils/RegistrationValidator";
 
 export function NameInput({labelText, handelName}){
 
@@ -10,7 +10,7 @@ export function NameInput({labelText, handelName}){
     var inputStyle = isValid ? "input" : "input input-error";
 
     function validateName(name){
-        const error = Validator.VerifyField(RegistrationField.Name, name, "name");
+        const error = RegistrationValidator.VerifyField(RegistrationField.Name, name, "name");
 
         setIsValid(error == "");
     }
