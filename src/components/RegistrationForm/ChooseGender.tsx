@@ -7,7 +7,7 @@ export function ChooseGender(){
         <div className="field">
             <label className="field-name"><b>Gender</b></label>
             
-            <GenderRadio id={'male'} gender={'Male'}></GenderRadio>
+            <GenderRadio id={'male'} gender={'Male'} isChecked={true}></GenderRadio>
             <GenderRadio id={'female'} gender={'Female'}></GenderRadio>
         </div>
     )

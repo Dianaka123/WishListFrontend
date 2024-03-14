@@ -25,18 +25,23 @@ export class RegistrationValidator{
             }
         };
 
-        verify(RegistrationValidator.VerifyField(RegistrationField.Email, data.email, "email"));
-        verify(RegistrationValidator.VerifyField(RegistrationField.Name, data.firstName, "first name"));
-        verify(RegistrationValidator.VerifyField(RegistrationField.Name, data.lastName, "last name"));
-        verify(RegistrationValidator.VerifyField(RegistrationField.Password, data.password, "password"));
+        verify(RegistrationValidator.VerifyFieldWithError(RegistrationField.Email, data.email, "email"));
+        verify(RegistrationValidator.VerifyFieldWithError(RegistrationField.Name, data.firstName, "first name"));
+        verify(RegistrationValidator.VerifyFieldWithError(RegistrationField.Name, data.lastName, "last name"));
+        verify(RegistrationValidator.VerifyFieldWithError(RegistrationField.Password, data.password, "password"));
         verify(RegistrationValidator.VerifyBirthdayDate(data.birthDate, "birth date"));
 
         console.log(result);
+        console.log(data.gender);
         return result;
     }
     
-    public static VerifyField(regex: RegistrationField, field: string, errorFieldName: string){
-        return RegistrationValidator.registrationFieldToRegex.get(regex).test(field) ? "" : errorFieldName;
+    public static VerifyFieldWithError(regex: RegistrationField, field: string, errorFieldName: string){
+        return RegistrationValidator.VerifyField(regex, field) ? "" : errorFieldName;
+    }
+
+    public static VerifyField(regex: RegistrationField, field: string): boolean{
+        return RegistrationValidator.registrationFieldToRegex.get(regex).test(field);
     }
 
     public static VerifyBirthdayDate(field: string, errorFieldName: string): string{

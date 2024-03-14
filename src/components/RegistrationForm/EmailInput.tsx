@@ -16,8 +16,7 @@ export function EmailInput(){
     }
 
     function validateEmail(email: string){
-        const error = RegistrationValidator.VerifyField(RegistrationField.Email, email, "email");
-        setIsValid(error == "");
+        setIsValid(RegistrationValidator.VerifyField(RegistrationField.Email, email));
     }
 
     return(

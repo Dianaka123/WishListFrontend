@@ -1,4 +1,4 @@
-export function CommonInput({label, handleChange = null, isValid = true}){
+export function CommonInput({label, type = "text", handleChange = null, isValid = true}){
 
     let errorStyle = isValid ? "" : "input-error";
 
@@ -8,7 +8,7 @@ export function CommonInput({label, handleChange = null, isValid = true}){
             <label><b> {label} </b></label>
         </div>
         
-        <input className={"full-size-input " + errorStyle} onChange={handleChange}></input>
+        <input className={"full-size-input " + errorStyle} type={type} onChange={handleChange}></input>        
     </div>
 )
 }
