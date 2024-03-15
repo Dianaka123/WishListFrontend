@@ -6,3 +6,12 @@
     width: 50%;
     display: inline-grid;
 }
+
+.password-img {
+    margin-top: 5px;
+    margin-right: 20px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    pointer-events: "all";
+  }

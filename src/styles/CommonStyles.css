@@ -2,7 +2,6 @@
     margin: 0 auto 10px auto;
     display: flex;
     width: 500px;
-    /* border: black solid 1px; */
 }
 
 input{
@@ -29,7 +28,6 @@ input[type=radio]{
     min-width: 140px;
     align-items:center;
     height: 40px;
-    /* border: black solid 1px; */
 }
 
 .full-size-input{

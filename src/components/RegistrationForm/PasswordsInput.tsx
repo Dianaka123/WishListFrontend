@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
-import { CommonInput } from "./CommonInput";
 import { RegistrationContext } from "../../contexts/RegistrationContext";
 import { RegistrationField, RegistrationValidator } from "src/utils/RegistrationValidator";
+import { PasswordInput } from "./PasswordInput";
 
 export function PasswordsInput(){
     const data = useContext(RegistrationContext);
@@ -19,8 +19,8 @@ export function PasswordsInput(){
 
     return(
         <>
-            <CommonInput label={'Password'} type={"password"} handleChange={setPassword} isValid={isPasswordValid}/>
-            <CommonInput label={'Confirm Password'} type={"password"} handleChange={comparePasswords} isValid={isPasswordsEqual}/>
+            <PasswordInput label={'Password'} handleChange={setPassword} isValid={isPasswordValid}/>
+            <PasswordInput label={'Confirm Password'} handleChange={comparePasswords} isValid={isPasswordsEqual}/>
         </>
     )
 }
