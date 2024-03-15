@@ -1,13 +1,11 @@
 import { useState } from "react";
-import "../../styles/InputStyles.css";
-import "../../styles/TextStyles.css";
 import { RegistrationField, RegistrationValidator } from "../../utils/RegistrationValidator";
+import "../../styles/RegistrationFormStyles.css";
 
 export function NameInput({labelText, handelName}){
-
     const [isValid, setIsValid] = useState(true);
 
-    var inputStyle = isValid ? "input" : "input input-error";
+    var inputStyle = isValid ? "" : "input-error";
 
     function validateName(name){
         setIsValid(RegistrationValidator.VerifyField(RegistrationField.Name, name));
@@ -16,10 +14,11 @@ export function NameInput({labelText, handelName}){
     return(
         <div className="input-with-description">
                 <input
-                className={inputStyle}
+                className={"registration-input" + inputStyle}
                 onChange={(e) => {
-                    validateName(e.target.value);
-                    handelName(e.target.value);
+                    const name = e.target.value.trim();
+                    validateName(name);
+                    handelName(name);
                 }}
                 />
                 <label className="name-label">{labelText}</label>

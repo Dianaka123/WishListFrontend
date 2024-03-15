@@ -20,32 +20,33 @@ export class RegistrationValidator{
         let result: Array<string> = [];
         
         const verify = (errorMessage: string): void => {
-            if(errorMessage != null || errorMessage != ""){
+            if(errorMessage != null){
+                console.log(errorMessage)
                 result.push(errorMessage);
             }
         };
 
-        verify(RegistrationValidator.VerifyFieldWithError(RegistrationField.Email, data.email, "email"));
-        verify(RegistrationValidator.VerifyFieldWithError(RegistrationField.Name, data.firstName, "first name"));
-        verify(RegistrationValidator.VerifyFieldWithError(RegistrationField.Name, data.lastName, "last name"));
-        verify(RegistrationValidator.VerifyFieldWithError(RegistrationField.Password, data.password, "password"));
-        verify(RegistrationValidator.VerifyBirthdayDate(data.birthDate, "birth date"));
+        verify(RegistrationValidator.VerifyFieldWithError(RegistrationField.Email, data.email, " email"));
+        verify(RegistrationValidator.VerifyFieldWithError(RegistrationField.Name, data.firstName, " first name"));
+        verify(RegistrationValidator.VerifyFieldWithError(RegistrationField.Name, data.lastName, " last name"));
+        verify(RegistrationValidator.VerifyFieldWithError(RegistrationField.Password, data.password, " password"));
+        verify(RegistrationValidator.VerifyBirthdayDate(data.birthDate, " birth date"));
 
         console.log(result);
         console.log(data.gender);
         return result;
     }
     
-    public static VerifyFieldWithError(regex: RegistrationField, field: string, errorFieldName: string){
-        return RegistrationValidator.VerifyField(regex, field) ? "" : errorFieldName;
+    public static VerifyFieldWithError(regex: RegistrationField, field: string, errorFieldName: string): string | null{
+        return RegistrationValidator.VerifyField(regex, field) ? null : errorFieldName;
     }
 
     public static VerifyField(regex: RegistrationField, field: string): boolean{
         return RegistrationValidator.registrationFieldToRegex.get(regex).test(field);
     }
 
-    public static VerifyBirthdayDate(field: string, errorFieldName: string): string{
+    public static VerifyBirthdayDate(field: string, errorFieldName: string): string | null {
         const chosedData = DateUtilities.ConvertStrToDate(field);
-        return chosedData < DateUtilities.todayDate && chosedData > DateUtilities.minDate ? "" : errorFieldName;
+        return chosedData < DateUtilities.todayDate && chosedData > DateUtilities.minDate ? null : errorFieldName;
     }
 }

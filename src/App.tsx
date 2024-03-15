@@ -1,4 +1,4 @@
-import {RegistrationForm} from "./pages/Registration/RegistrationForm";
+import {RegistrationForm} from "./pages/RegistrationForm";
 
 const App = () =>(
   <RegistrationForm/>

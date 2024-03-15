@@ -3,7 +3,7 @@ import { RegistrationContext } from "../../contexts/RegistrationContext";
 import { RegistrationField, RegistrationValidator } from "src/utils/RegistrationValidator";
 import { PasswordInput } from "./PasswordInput";
 
-export function PasswordsInput(){
+export function PasswordAndConfirmInput(){
     const data = useContext(RegistrationContext);
     const [isPasswordsEqual, setIsPasswordsEqual] = useState(true);
     const [isPasswordValid, setIsPasswordValid] = useState(true)

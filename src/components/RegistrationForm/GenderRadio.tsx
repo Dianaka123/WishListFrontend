@@ -16,7 +16,7 @@ export function GenderRadio({id, gender, isChecked = false}){
 
     return(
         <>
-            <input type="radio" id={id} name="gender" onClick={setGender} defaultChecked={isChecked}/>
+            <input className="registration-input" type="radio" id={id} name="gender" onClick={setGender} defaultChecked={isChecked}/>
             <label htmlFor={id} className="gender-label">{gender}</label>
         </>
     )

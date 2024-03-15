@@ -1,15 +1,14 @@
-import {CommonInput} from "./CommonInput"
-import "../../styles/CommonStyles.css";
 import { useContext, useState } from "react";
 import { RegistrationContext } from "../../contexts/RegistrationContext";
 import { RegistrationField, RegistrationValidator } from "../../utils/RegistrationValidator";
+import "../../styles/RegistrationFormStyles.css";
 
 export function EmailInput(){
     const [isValid, setIsValid] = useState(true);
-
-    var inputStyle = isValid ? "input" : "input input-error";
     const data = useContext(RegistrationContext);
-    
+
+    let errorStyle = isValid ? "" : "input-error";
+
     function setEmail(e){
         data.email = e.target.value;
         validateEmail(e.target.value);
@@ -19,7 +18,14 @@ export function EmailInput(){
         setIsValid(RegistrationValidator.VerifyField(RegistrationField.Email, email));
     }
 
+
     return(
-        <CommonInput label={'Email'} handleChange={setEmail} isValid={isValid}/>
+    <div className="registration-field">
+        <div className="registration-field-name">
+            <label><b> Email </b></label>
+        </div>
+        
+        <input className={"registration-input full-size-input " + errorStyle} type="email" onChange={setEmail}></input>        
+    </div>
     );
 }

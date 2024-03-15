@@ -3,7 +3,6 @@ import { RegistrationContext } from "../../contexts/RegistrationContext";
 import { RegistrationValidator } from "../../utils/RegistrationValidator";
 
 export function RegisterButton(){
-
     const data = useContext(RegistrationContext);
     const [errorArray, setErrorArray] = useState<Array<string>>();
 
@@ -35,7 +34,7 @@ export function RegisterButton(){
 
     return(
         <div>
-            {errorArray?.length > 0 && <div className="field">Wrong fields: {errorArray.toString()}</div>}
+            {errorArray?.length > 0 && <div className="registration-field"><b style={{color: "red"}}>Wrong fields:{errorArray.toString()}</b></div>}
             <button type="submit" className="registration-btn" onClick={handelClick}>Register</button>
         </div>
     )
