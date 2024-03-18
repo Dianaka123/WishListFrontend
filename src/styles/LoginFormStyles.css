@@ -1,0 +1,36 @@
+.login-field{
+    margin: 0 auto 10px auto;
+    display: flex;
+    width: 400px;
+}
+  
+.login-field-name{
+    display: flex;
+    min-width: 60px;
+    align-items:center;
+    height: 40px;
+}
+  
+.login-input{
+    height: 30px;
+    min-width: 100px;
+    background: #dbdbdb;
+    margin: 5px 20px 0 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.login-btn{
+    margin: 0 auto auto auto;
+    height: 30px;
+    width: 200px;
+    color: white;
+    background-color: #2268fd;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}
+  
+.login-btn:hover{
+    background-color: #1e51be;
+}

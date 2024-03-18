@@ -11,4 +11,3 @@ export interface RegistrationData
 }
 
 export const RegistrationContext = createContext<RegistrationData>(null);
-export const RegistrationDispatchContext = createContext(null);

@@ -1,0 +1,34 @@
+/* Модальный (фон) */
+.modal {
+    position: fixed; /* Оставаться на месте */
+    z-index: 1; /* Сидеть на вершине */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включите прокрутку, если это необходимо */
+    background-color: #2d4d92;
+    padding-top: 1%;
+  }
+  
+  /* Модальное содержание/бокс */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% сверху, 15% снизу и по центру */
+    border: 1px solid #888;
+    width: 550px; /* Может быть больше или меньше, в зависимости от размера экрана */
+    border-radius: 5%;
+  }
+
+.container{
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+}
+
+.full-size-input{
+    width: 100%;
+}
+  
+.centralized-h1 {
+    text-align: center;
+}

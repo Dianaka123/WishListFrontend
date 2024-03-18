@@ -5,8 +5,7 @@ import { ChooseGender } from "../components/RegistrationForm/ChooseGender"
 import { PasswordAndConfirmInput } from "../components/RegistrationForm/PasswordAndConfirmInput"
 import { RegisterButton } from "../components/RegistrationForm/RegisterButton"
 import { RegistrationContext, RegistrationData } from "../contexts/RegistrationContext"
-import "../styles/RegistrationFormStyles.css";
-import { Link } from "react-router-dom"
+import "../styles/FormStyles.css";
 
 export function RegistrationForm(){
   let data: RegistrationData = {
@@ -23,7 +22,7 @@ export function RegistrationForm(){
         <div className="modal">
           <form className="modal-content">
             <div className="container">
-              <h1 className="registration-h1">Registration</h1>
+              <h1 className="centralized-h1">Registration</h1>
               <FullNameInput/>
               <EmailInput/>
               <BirthdayDateInput/>
