@@ -14,7 +14,7 @@ export function NameInput({labelText, handelName}){
     return(
         <div className="input-with-description">
                 <input
-                className={"registration-input" + inputStyle}
+                className={"registration-input " + inputStyle}
                 onChange={(e) => {
                     const name = e.target.value.trim();
                     validateName(name);

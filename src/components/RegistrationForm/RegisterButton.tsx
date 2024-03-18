@@ -1,6 +1,7 @@
 import { useContext, useState } from "react"
 import { RegistrationContext } from "../../contexts/RegistrationContext";
 import { RegistrationValidator } from "../../utils/RegistrationValidator";
+import { Link } from "react-router-dom";
 
 export function RegisterButton(){
     const data = useContext(RegistrationContext);
@@ -36,6 +37,7 @@ export function RegisterButton(){
         <div>
             {errorArray?.length > 0 && <div className="registration-field"><b style={{color: "red"}}>Wrong fields:{errorArray.toString()}</b></div>}
             <button type="submit" className="registration-btn" onClick={handelClick}>Register</button>
+            <Link className="link-to-login"  to="/login">Already redistrated? Go to Login.</Link>
         </div>
     )
 }

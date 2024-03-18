@@ -11,7 +11,7 @@ export function BirthdayDateInput(){
     let errorStyle = isValid ? "" : "input-error";
     
     function handelDate(e){
-        setIsValid(RegistrationValidator.VerifyBirthdayDate(e.target.value, "birth") == "");
+        setIsValid(RegistrationValidator.VerifyBirthdayDate(e.target.value, "birth") == null);
         setDate(e.target.value);
         data.birthDate = e.target.value;
     }
@@ -19,7 +19,7 @@ export function BirthdayDateInput(){
     return(
         <div className="registration-field">
             <label className="registration-field-name"><b>Birth date</b></label>
-            <input type="date" className={"registration-input full-size-input" + errorStyle}
+            <input type="date" className={"registration-input full-size-input " + errorStyle}
             value={date} onChange={handelDate} max={DateUtilities.todayDateStr} min={DateUtilities.minDateStr}></input>
         </div>
     );    

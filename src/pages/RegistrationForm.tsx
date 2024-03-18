@@ -6,6 +6,7 @@ import { PasswordAndConfirmInput } from "../components/RegistrationForm/Password
 import { RegisterButton } from "../components/RegistrationForm/RegisterButton"
 import { RegistrationContext, RegistrationData } from "../contexts/RegistrationContext"
 import "../styles/RegistrationFormStyles.css";
+import { Link } from "react-router-dom"
 
 export function RegistrationForm(){
   let data: RegistrationData = {
