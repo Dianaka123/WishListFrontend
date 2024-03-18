@@ -10,7 +10,7 @@ export enum RegistrationField {
 export class RegistrationValidator{
 
     private static readonly registrationFieldToRegex = new Map<RegistrationField, RegExp>([
-        [RegistrationField.Name, /^[a-zA-Z ]{2,30}$/],
+        [RegistrationField.Name, /^[A-Z][a-zA-Z]{2,}$/],
         [RegistrationField.Email, /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/],
         [RegistrationField.Password, /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/],
     ]);
