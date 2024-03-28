@@ -1,13 +1,15 @@
 import { useContext, useState } from "react"
 import { RegistrationContext } from "../../contexts/RegistrationContext";
 import { RegistrationValidator } from "../../utils/RegistrationValidator";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export function RegisterButton(){
     const data = useContext(RegistrationContext);
+    const navigate = useNavigate();
+
     const [errorArray, setErrorArray] = useState<Array<string>>();
 
-    const registerEndPoint = 'https://localhost:7035/Registration';
+    const registerEndPoint = 'https://localhost:7035/api/register';
 
     function handelClick(e){
         e.preventDefault();
@@ -30,7 +32,11 @@ export function RegisterButton(){
         };
 
         fetch(registerEndPoint, requestOptions)
-        .then(response => console.log(response.status))
+        .then(response => {
+            if(response.status == 200){
+                navigate("/check-email")
+            }
+        });
     }
 
     return(

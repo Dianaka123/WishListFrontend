@@ -8,6 +8,7 @@ export interface RegistrationData
     birthDate: string;
     gender: string;
     password: string;
+    clientURL: string;
 }
 
 export const RegistrationContext = createContext<RegistrationData>(null);

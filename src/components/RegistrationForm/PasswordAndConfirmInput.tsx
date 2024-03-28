@@ -1,7 +1,8 @@
 import { useContext, useState } from "react";
 import { RegistrationContext } from "../../contexts/RegistrationContext";
 import { RegistrationField, RegistrationValidator } from "src/utils/RegistrationValidator";
-import { PasswordInput } from "./PasswordInput";
+import { PasswordInput } from "../PasswordInput";
+import { StylesFor } from "src/utils/StylesFor";
 
 export function PasswordAndConfirmInput(){
     const data = useContext(RegistrationContext);
@@ -19,8 +20,8 @@ export function PasswordAndConfirmInput(){
 
     return(
         <>
-            <PasswordInput label={'Password'} handleChange={setPassword} isValid={isPasswordValid}/>
-            <PasswordInput label={'Confirm Password'} handleChange={comparePasswords} isValid={isPasswordsEqual}/>
+            <PasswordInput label={'Password'} handleChange={setPassword} isValid={isPasswordValid} style={StylesFor.Register}/>
+            <PasswordInput label={'Confirm Password'} handleChange={comparePasswords} isValid={isPasswordsEqual} style={StylesFor.Register}/>
         </>
     )
 }

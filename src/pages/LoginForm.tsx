@@ -2,6 +2,9 @@ import { DataInput } from "src/components/LoginForm/DataInput";
 import { LoginContext, LoginData } from "src/contexts/LoginContext";
 import "../styles/FormStyles.css";
 import { LoginBtn } from "src/components/LoginForm/LoginBtn";
+import { Link } from "react-router-dom";
+import { StylesFor } from "src/utils/StylesFor";
+import { PasswordInput } from "src/components/PasswordInput";
 
 export function LoginForm(){
     let data: LoginData = {
@@ -24,8 +27,9 @@ export function LoginForm(){
                 <div className="container">
                     <h1 className="centralized-h1"> Log In </h1>
                     <DataInput label={"Email"} inputType={"email"} setData={setEmail}></DataInput>
-                    <DataInput label={"Password"} inputType={"text"} setData={setPassword}></DataInput>
+                    <PasswordInput label={"Password"} handleChange={setPassword} isValid={true} style={StylesFor.Login}></PasswordInput>
                     <LoginBtn data={data}></LoginBtn>
+                    <Link className="link-to-registration"  to="/registration">Create account</Link>
                 </div>
             </form>
         </div>

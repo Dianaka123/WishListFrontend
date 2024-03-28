@@ -15,6 +15,7 @@ export function RegistrationForm(){
     birthDate: "",
     gender: "",
     password: "",
+    clientURL: "http://localhost:3000/confirm-email",
   };
 
   return(

@@ -34,3 +34,8 @@
 .login-btn:hover{
     background-color: #1e51be;
 }
+
+.link-to-registration{
+    margin: auto auto 10px 40%;
+    display: flex;
+  }
