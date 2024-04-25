@@ -22,8 +22,7 @@ export function CheckEmail(){
         };
     
         fetch(sendConfirmationEmailEndPoint, requestOptions)
-        console.log(location.state.key)
-    }, [location]);
+    });
 
 
     return(
