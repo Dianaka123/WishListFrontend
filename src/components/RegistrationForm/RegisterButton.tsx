@@ -34,7 +34,7 @@ export function RegisterButton(){
         fetch(registerEndPoint, requestOptions)
         .then(response => {
             if(response.status == 200){
-                navigate("/check-email")
+                navigate("/check-email", { state: { key: data.email } })
             }
         });
     }

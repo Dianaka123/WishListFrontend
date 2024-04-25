@@ -8,7 +8,12 @@ export interface RegistrationData
     birthDate: string;
     gender: string;
     password: string;
-    clientURL: string;
+}
+
+export interface ConfirmationEmailData
+{
+    email: string,
+    url: string
 }
 
 export const RegistrationContext = createContext<RegistrationData>(null);

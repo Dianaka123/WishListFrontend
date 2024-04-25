@@ -29,7 +29,8 @@ export function LoginForm(){
                     <DataInput label={"Email"} inputType={"email"} setData={setEmail}></DataInput>
                     <PasswordInput label={"Password"} handleChange={setPassword} isValid={true} style={StylesFor.Login}></PasswordInput>
                     <LoginBtn data={data}></LoginBtn>
-                    <Link className="link-to-registration"  to="/registration">Create account</Link>
+                    <Link className="login-navigate-to"  to="/email-to-reset">Forget password?</Link>
+                    <Link className="login-navigate-to"  to="/registration">Create account</Link>
                 </div>
             </form>
         </div>

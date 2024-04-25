@@ -6,4 +6,3 @@ export interface LoginData{
 } 
 
 export const LoginContext = createContext<LoginData>(null);
-
